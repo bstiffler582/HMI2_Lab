@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{d9b863b2-b657-4ccc-9c2a-5215c016c265}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fbTon			: TON;
+	i				: INT;
+	rand			: ARRAY[0..2] OF DRAND;
+	
+	bAlarms			: ARRAY[0..4] OF BOOL;
+	iAnalogValue	: DINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbTon(IN:=NOT fbTon.Q, PT:=T#3S);
+IF fbTon.Q THEN
+	FOR i := 0 TO 2 DO
+		rand[i](Seed:=i);
+		GVL.mb_Input_Registers[i] := TO_WORD(rand[i].Num * 1000);
+		GVL.mb_Output_Registers[i] := TO_WORD(rand[i].Num * 777);
+	END_FOR
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="13" Count="2" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="16" Count="2" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

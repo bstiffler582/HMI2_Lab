@@ -1,0 +1,82 @@
+{
+    "alarmSymbols": {
+        "PLC1.MAIN.bAlarms.0": {
+            "alarmSettings": {
+                "Error": {
+                    "alarmTextKey": "Error Alarm Raised!",
+                    "condition": [
+                        [
+                            {
+                                "comparator": "==",
+                                "value": true
+                            }
+                        ]
+                    ],
+                    "enabled": true,
+                    "notificationType": 2,
+                    "severity": 3
+                }
+            },
+            "enabled": true,
+            "interval": "PT1S",
+            "onError": false
+        },
+        "PLC1.MAIN.bAlarms.1": {
+            "alarmSettings": {
+                "Info": {
+                    "alarmTextKey": "Info Alarm Raised!",
+                    "condition": [
+                        [
+                            {
+                                "comparator": "==",
+                                "value": true
+                            }
+                        ]
+                    ],
+                    "enabled": true,
+                    "notificationType": 2,
+                    "severity": 1
+                }
+            },
+            "enabled": true,
+            "interval": "PT1S",
+            "onError": false
+        },
+        "PLC1.MAIN.iAnalogValue": {
+            "alarmSettings": {
+                "Critical": {
+                    "alarmTextKey": "Critical Value Reached!",
+                    "condition": [
+                        [
+                            {
+                                "comparator": ">=",
+                                "value": 85.0
+                            }
+                        ]
+                    ],
+                    "enabled": true,
+                    "notificationType": 2,
+                    "severity": 4
+                },
+                "Warning": {
+                    "alarmTextKey": "Warning Value Reached!",
+                    "condition": [
+                        [
+                            {
+                                "comparator": ">=",
+                                "value": 70.0
+                            }
+                        ]
+                    ],
+                    "enabled": true,
+                    "notificationType": 2,
+                    "severity": 2
+                }
+            },
+            "enabled": true,
+            "interval": "PT1S",
+            "onError": false
+        }
+    },
+    "limitEventCount": 1000
+}

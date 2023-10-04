@@ -129,7 +129,7 @@ class ModbusTarget
     private IDictionary<string, int> registers;
     public IDictionary<string, int> Registers => registers;
 
-    ModbusTarget(string name, string address, int port) 
+    public ModbusTarget(string name, string address, int port) 
     {
         this.Name = name;
         this.Address = address;

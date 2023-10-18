@@ -163,11 +163,11 @@ Copy the markup from the *TcHmiEventLine\Template.html*, and paste it **inside t
 
 Finally, before we can drop our control into the designer, we need to change one little line in the script file. In *EventLineToaster.js* change this:
 ```js
-class EventLineToaster extends TcHmi.Controls.System.TcHmiControl
+class EventLineToaster extends TcHmi.Controls.System.TcHmiControl {
 ```
 to this:
 ```js
-class EventLineToaster extends TcHmi.Controls.Beckhoff.TcHmiEventLine
+class EventLineToaster extends TcHmi.Controls.Beckhoff.TcHmiEventLine {
 ```
 Once again, telling the framework that we are extending a Beckhoff control instead of starting from scratch.
 

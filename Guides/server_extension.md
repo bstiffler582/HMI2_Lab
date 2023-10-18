@@ -259,7 +259,7 @@ We are finally ready to actually implement the Modbus protocol. Luckily, someone
 
 We will be using the [EasyModbusTCP](https://github.com/rossmann-engineering/EasyModbusTCP.NET) library, and fortunately it is available right on Nuget.
 
-Once you've added the package, we can implement the Modbus TCP client in our `ModbusTcpTarget` class as follows.
+Once you've added the package, we can implement the Modbus TCP client in our `ModbusTarget` class as follows.
 
 Add the namespace:
 ```cs

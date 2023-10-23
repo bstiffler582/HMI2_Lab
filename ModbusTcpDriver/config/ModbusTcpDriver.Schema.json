@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "target": {
+      "type": "object",
+      "properties": {
+        "targetAddress": {
+          "type": "string",
+          "description": "IP or hostname of Modbus TCP server"
+        },
+        "targetPort": {
+          "type": "integer",
+          "description": "Port number",
+          "default": 502
+        },
+        "registers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "default": 400001
+          }
+        }
+      },
+      "required": [ "targetAddress", "targetPort" ]
+    }
+  },
+  "properties": {
+    "targets": {
+      "configDescription": "Modbus TCP master targets",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/target"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+    "targets": {
+        "MyTarget": {
+            "registers": {
+                "holding_register_1": 432768,
+                "holding_register_2": 432772,
+                "input_register_1": 332768,
+                "input_register_2": 332769
+            },
+            "targetAddress": "127.0.0.1",
+            "targetPort": 502
+        }
+    }
+}

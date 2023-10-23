@@ -2734,6 +2734,19 @@
         "ChangedDataOnly"
       ]
     },
+    "TcHmi.Controls.Notifications.EventLineToaster": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "EventLineToaster",
+      "frameworkControlNamespace": "TcHmi.Controls.Notifications"
+    },
+    "ToastType": {
+      "type": "string",
+      "enum": [
+        "info",
+        "error"
+      ]
+    },
     "TcHmi.Controls.Beckhoff.TcHmiButton": {
       "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",

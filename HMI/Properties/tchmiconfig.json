@@ -86,6 +86,10 @@
   },
   "packages": [
     {
+      "name": "Notifications",
+      "basePath": "/Notifications"
+    },
+    {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
       "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
     },

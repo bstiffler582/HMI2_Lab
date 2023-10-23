@@ -1,0 +1,30 @@
+{
+  "$schema": "ExtensionSettings.Schema.json",
+  "guid": "f5ef0b36-b3a6-4686-a918-19eebcb1de81",
+  "version": "1.0.0.0",
+  "configVersion": "1.0.0.0",
+  "policies": [
+    "StrictPropertyValidation",
+    "StrictConfigListenerFilter"
+  ],
+  "symbols": {
+    "ListSymbols": {
+      "readValue": {
+        "function": true
+      }
+    },
+    "GetDefinitions": {
+      "readValue": {
+        "function": true
+      }
+    },
+    "GetSchema": {
+      "readValue": {
+        "function": true
+      },
+      "writeValue": {
+        "type": "string"
+      }
+    }
+  }
+}

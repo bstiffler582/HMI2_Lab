@@ -1,0 +1,125 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "EventLineToaster",
+  "namespace": "TcHmi.Controls.Notifications",
+  "displayName": "EventLineToaster",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.Beckhoff.TcHmiEventLine",
+  "description": "This description text will be used as a Tooltip in Visual Studio.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 560,
+      "height": 40
+    }
+  },
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "template": "Template.html",
+  "dependencyFiles": [
+    {
+      "name": "EventLineToaster.js",
+      "type": "JavaScript",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    },
+    {
+      "name": "../Lib/notyf.min.js",
+      "type": "JavaScript"
+    },
+    {
+      "name": "../Lib/notyf.min.css",
+      "type": "Stylesheet"
+    }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "displayName": "Enable Notifications",
+      "name": "data-tchmi-enable-notifications",
+      "propertyGetterName": "getEnableNotifications",
+      "propertySetterName": "setEnableNotifications",
+      "propertyName": "enableNotifications",
+      "type": "tchmi:general#/definitions/Boolean",
+      "bindable": true,
+      "visible": true,
+      "defaultValue": true,
+      "defaultValueInternal": true,
+      "description": "Enable toast notifications.",
+      "category": "Common"
+    }
+  ],
+  "attributeCategories": [],
+  "functions": [
+    {
+      "category": "Common",
+      "displayName": "Notify",
+      "heritable": true,
+      "name": "notify",
+      "type": null,
+      "visible": true,
+      "description": "Invoke toast notification.",
+      "params": [
+        {
+          "displayName": "Type",
+          "name": "type",
+          "type": "tchmi:framework#/definitions/ToastType",
+          "visible": true,
+          "bindable": false,
+          "description": "Type of toast message"
+        },
+        {
+          "displayName": "Text",
+          "name": "text",
+          "type": "tchmi:general#/definitions/String",
+          "visible": true,
+          "bindable": false,
+          "description": "Toast message text."
+        }
+      ]
+    }
+  ],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}

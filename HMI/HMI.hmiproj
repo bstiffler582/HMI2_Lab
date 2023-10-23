@@ -118,6 +118,7 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="Server\ModbusTcpDriver" />
     <Folder Include="Server\TcHmiAlarm" />
     <Folder Include="Themes" />
     <Folder Include="Themes\Base-Dark\Images\" />
@@ -129,6 +130,15 @@
     <Folder Include="Properties" />
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
+    </Content>
+    <Content Include="Server\ModbusTcpDriver\ModbusTcpDriver.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\ModbusTcpDriver\ModbusTcpDriver.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\ModbusTcpDriver\ModbusTcpDriver.Storage.json">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiAlarm\TcHmiAlarm.Config.default.json">
       <SubType>Content</SubType>
@@ -407,6 +417,17 @@
       <Visible>false</Visible>
     </Content>
     <Folder Include="Themes\Base\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModbusTcpDriver\ModbusTcpDriver.csproj">
+      <Name>ModbusTcpDriver</Name>
+      <Project>{f5ef0b36-b3a6-4686-a918-19eebcb1de81}</Project>
+      <State>on</State>
+    </ProjectReference>
+    <ProjectReference Include="..\Notifications\Notifications.hmiextproj">
+      <Name>Notifications</Name>
+      <Project>{b23bb76a-82f8-4178-b3be-8e9d0ed802eb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

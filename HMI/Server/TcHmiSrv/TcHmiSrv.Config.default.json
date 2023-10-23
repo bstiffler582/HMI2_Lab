@@ -47,6 +47,13 @@
             "REQUIRED": true,
             "STARTUPTYPE": 1
         },
+        "ModbusTcpDriver": {
+            "ENABLED": true,
+            "NAME": "ModbusTcpDriver",
+            "PATH": "..\\..\\ModbusTcpDriver\\bin\\Debug\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
         "TcHmiAlarm": {
             "ENABLED": true,
             "NAME": "TcHmiAlarm",
@@ -2506,6 +2513,95 @@
             },
             "USEMAPPING": true
         },
+        "ModbusTcpDriver.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "ModbusTcpDriver.GetDefinitions": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetDefinitions",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "ModbusTcpDriver.GetSchema": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetSchema",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "type": "string"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "ModbusTcpDriver.ListSymbols": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListSymbols",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "MyTarget.holding_register_1": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": true,
+            "MAPPING": "MyTarget.holding_register_1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT32"
+            },
+            "USEMAPPING": true
+        },
+        "MyTarget.holding_register_2": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": true,
+            "MAPPING": "MyTarget.holding_register_2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT32"
+            },
+            "USEMAPPING": true
+        },
+        "MyTarget.input_register_1": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": true,
+            "MAPPING": "MyTarget.input_register_1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT32"
+            },
+            "USEMAPPING": true
+        },
+        "MyTarget.input_register_2": {
+            "ACCESS": 3,
+            "DOMAIN": "ModbusTcpDriver",
+            "DYNAMIC": true,
+            "MAPPING": "MyTarget.input_register_2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT32"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.bAlarms.0": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3564,6 +3660,10 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "MyTarget.holding_register_1": 3,
+                "MyTarget.holding_register_2": 3,
+                "MyTarget.input_register_1": 3,
+                "MyTarget.input_register_2": 3,
                 "PLC1.MAIN.bAlarms.0": 3,
                 "PLC1.MAIN.bAlarms.1": 3,
                 "PLC1.MAIN.iAnalogValue": 3,
@@ -3616,6 +3716,7 @@
         "/": "..\\..\\HMI\\",
         "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.760.48\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.760.48\\runtimes\\native1.12-tchmi",
+        "/Notifications": "..\\..\\Notifications",
         "/bin": "..\\..\\HMI\\bin\\",
         "/bin/framework": "..\\..\\HMI\\bin\\framework",
         "/framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.760.48\\runtimes\\native1.12-tchmi"
